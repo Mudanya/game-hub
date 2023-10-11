@@ -6,7 +6,7 @@ type Props = {
 }
 const GameCardContainer = ({children}:Props) => {
   return (
-    <Box borderRadius={10} width={{"lg":'400px',"md":'250px'}} overflow="hidden">
+    <Box borderRadius={10}  overflow="hidden">
         {children}
     </Box>
   )

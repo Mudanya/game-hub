@@ -21,7 +21,7 @@ const useData = <T>(endPoint: string) => {
 				setLoading(false);
 			})
 			.catch((err: AxiosError) => {
-				if (err instanceof CanceledError) setError(err.message);
+				if (!(err instanceof CanceledError)) setError(err.message);
 				setLoading(false);
 			});
 		return () => controller.abort();
