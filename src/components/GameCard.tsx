@@ -6,9 +6,8 @@ import getCropImageSize from "../services/getCropImageSize"
 
 
 const GameCard = ({name,background_image,parent_platforms,metacritic}:Game) => {
-    console.log('pp->',parent_platforms)
   return (
-    <Card borderRadius={10} width={{"lg":'400px',"md":'45vw'}} overflow="hidden">
+    <Card >
         <Image src={getCropImageSize(background_image)}/>
         <CardBody>
             <Heading fontSize={'2xl'}>{name}</Heading>
