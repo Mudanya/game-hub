@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import apiClient, { AxiosError, CanceledError } from "../services/api-client";
 import useData from "./useData";
 import { Genre } from "./useGenres";
 
