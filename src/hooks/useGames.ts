@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import apiClient, { AxiosError, CanceledError } from "../services/api-client";
 import useData from "./useData";
+import { Genre } from "./useGenres";
 
 export type PlatForm = {
 	id: number;
@@ -16,5 +17,5 @@ export type Game = {
 };
 
 
-const useGames = () => useData<Game>('games')
+const useGames = (selectedGenre:Genre | null) => useData<Game>('games',{params:{genres:selectedGenre?.id}},[selectedGenre?.id])
 export default useGames;
