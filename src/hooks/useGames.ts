@@ -13,6 +13,7 @@ export type Game = {
 	background_image: string;
 	parent_platforms: { platform: PlatForm }[];
 	metacritic: number;
+	rating_top:number
 };
 
 const useGames = (gameQuery: GameQuery) =>
