@@ -8,7 +8,7 @@ import getCropImageSize from "../services/getCropImageSize"
 const GameCard = ({name,background_image,parent_platforms,metacritic}:Game) => {
   return (
     <Card >
-        <Image src={getCropImageSize(background_image)}/>
+        <Image src={getCropImageSize(background_image)} aspectRatio={3/2}/>
         <CardBody>
             <Heading fontSize={'2xl'}>{name}</Heading>
             <HStack justifyContent={'space-between'}>
